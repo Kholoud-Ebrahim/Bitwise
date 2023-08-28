@@ -1,0 +1,5 @@
+Merging file coverage/bitwise_random_test.ucdb
+Merging file coverage/bitwise_all_zero_test.ucdb
+Merging file coverage/bitwise_all_one_test.ucdb
+Writing merged result to coverage/bitwise_all.ucdb
+

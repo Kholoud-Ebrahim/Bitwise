@@ -1,0 +1,129 @@
+COVERGROUP COVERAGE:
+------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric      Goal/ Status                      
+                                                                At Least                             
+------------------------------------------------------------------------------------------------------
+ TYPE /cov_collect_pkg/and_coverage_collector/cov_and 
+                                                       100.0%        100 Covered                   
+      Coverpoint cov_and::cp_and_in1                     100.0%        100 Covered                   
+      Coverpoint cov_and::cp_and_in2                     100.0%        100 Covered                   
+      Coverpoint cov_and::cp_and_out                     100.0%        100 Covered                   
+   Covergroup instance \/cov_collect_pkg::and_coverage_collector::cov_and  
+                                                       100.0%        100 Covered                   
+      Coverpoint cp_and_in1                              100.0%        100 Covered                   
+          covered/total bins:                                 3          3                           
+          missing/total bins:                                 0          3                           
+          bin in1_all_zeros                                  20          1 Covered                   
+          bin in1_all_ones                                   20          1 Covered                   
+          bin in1_others                                    100          1 Covered                   
+      Coverpoint cp_and_in2                              100.0%        100 Covered                   
+          covered/total bins:                                 3          3                           
+          missing/total bins:                                 0          3                           
+          bin in2_all_zeros                                  20          1 Covered                   
+          bin in2_all_ones                                   20          1 Covered                   
+          bin in2_others                                    100          1 Covered                   
+      Coverpoint cp_and_out                              100.0%        100 Covered                   
+          covered/total bins:                                 3          3                           
+          missing/total bins:                                 0          3                           
+          bin out_all_zeros                                  31          1 Covered                   
+          bin out_all_ones                                   20          1 Covered                   
+          bin out_others                                     89          1 Covered                   
+   TYPE /cov_collect_pkg/or_coverage_collector/cov_or 
+                                                       100.0%        100 Covered                   
+      Coverpoint cov_or::cp_or_in1                       100.0%        100 Covered                   
+      Coverpoint cov_or::cp_or_in2                       100.0%        100 Covered                   
+      Coverpoint cov_or::cp_or_out                       100.0%        100 Covered                   
+   Covergroup instance \/cov_collect_pkg::or_coverage_collector::cov_or  
+                                                       100.0%        100 Covered                   
+      Coverpoint cp_or_in1                               100.0%        100 Covered                   
+          covered/total bins:                                 3          3                           
+          missing/total bins:                                 0          3                           
+          bin in1_all_zeros                                  20          1 Covered                   
+          bin in1_all_ones                                   20          1 Covered                   
+          bin in1_others                                    100          1 Covered                   
+      Coverpoint cp_or_in2                               100.0%        100 Covered                   
+          covered/total bins:                                 3          3                           
+          missing/total bins:                                 0          3                           
+          bin in2_all_zeros                                  20          1 Covered                   
+          bin in2_all_ones                                   20          1 Covered                   
+          bin in2_others                                    100          1 Covered                   
+      Coverpoint cp_or_out                               100.0%        100 Covered                   
+          covered/total bins:                                 3          3                           
+          missing/total bins:                                 0          3                           
+          bin out_all_zeros                                  20          1 Covered                   
+          bin out_all_ones                                   24          1 Covered                   
+          bin out_others                                     96          1 Covered                   
+   TYPE /cov_collect_pkg/shift_coverage_collector/cov_shift 
+                                                       100.0%        100 Covered                   
+      Coverpoint cov_shift::cp_sr_in                     100.0%        100 Covered                   
+      Coverpoint cov_shift::cp_sr_op                     100.0%        100 Covered                   
+      Coverpoint cov_shift::cp_sr_out                    100.0%        100 Covered                   
+      Coverpoint cov_shift::cp_sl_in                     100.0%        100 Covered                   
+      Coverpoint cov_shift::cp_sl_op                     100.0%        100 Covered                   
+      Coverpoint cov_shift::cp_sl_out                    100.0%        100 Covered                   
+   Covergroup instance \/cov_collect_pkg::shift_coverage_collector::cov_shift  
+                                                       100.0%        100 Covered                   
+      Coverpoint cp_sr_in                                100.0%        100 Covered                   
+          covered/total bins:                                 4          4                           
+          missing/total bins:                                 0          4                           
+          bin auto[0:63]                                     45          1 Covered                   
+          bin auto[64:127]                                   32          1 Covered                   
+          bin auto[128:191]                                  20          1 Covered                   
+          bin auto[192:255]                                  43          1 Covered                   
+      Coverpoint cp_sr_op                                100.0%        100 Covered                   
+          covered/total bins:                                 1          1                           
+          missing/total bins:                                 0          1                           
+          bin cp_sl_op                                      140          1 Covered                   
+      Coverpoint cp_sr_out                               100.0%        100 Covered                   
+          covered/total bins:                                 4          4                           
+          missing/total bins:                                 0          4                           
+          bin auto[0:63]                                    107          1 Covered                   
+          bin auto[64:127]                                    7          1 Covered                   
+          bin auto[128:191]                                   2          1 Covered                   
+          bin auto[192:255]                                  24          1 Covered                   
+      Coverpoint cp_sl_in                                100.0%        100 Covered                   
+          covered/total bins:                                 4          4                           
+          missing/total bins:                                 0          4                           
+          bin auto[0:63]                                     47          1 Covered                   
+          bin auto[64:127]                                   21          1 Covered                   
+          bin auto[128:191]                                  25          1 Covered                   
+          bin auto[192:255]                                  47          1 Covered                   
+      Coverpoint cp_sl_op                                100.0%        100 Covered                   
+          covered/total bins:                                 1          1                           
+          missing/total bins:                                 0          1                           
+          bin cp_sl_op                                      140          1 Covered                   
+      Coverpoint cp_sl_out                               100.0%        100 Covered                   
+          covered/total bins:                                 4          4                           
+          missing/total bins:                                 0          4                           
+          bin auto[0:63]                                     64          1 Covered                   
+          bin auto[64:127]                                   19          1 Covered                   
+          bin auto[128:191]                                  19          1 Covered                   
+          bin auto[192:255]                                  38          1 Covered                   
+   TYPE /cov_collect_pkg/xor_coverage_collector/cov_xor 
+                                                       100.0%        100 Covered                   
+      Coverpoint cov_xor::cp_xor_in1                     100.0%        100 Covered                   
+      Coverpoint cov_xor::cp_xor_in2                     100.0%        100 Covered                   
+      Coverpoint cov_xor::cp_xor_out                     100.0%        100 Covered                   
+   Covergroup instance \/cov_collect_pkg::xor_coverage_collector::cov_xor  
+                                                       100.0%        100 Covered                   
+      Coverpoint cp_xor_in1                              100.0%        100 Covered                   
+          covered/total bins:                                 3          3                           
+          missing/total bins:                                 0          3                           
+          bin in1_all_zeros                                  20          1 Covered                   
+          bin in1_all_ones                                   20          1 Covered                   
+          bin in1_others                                    100          1 Covered                   
+      Coverpoint cp_xor_in2                              100.0%        100 Covered                   
+          covered/total bins:                                 3          3                           
+          missing/total bins:                                 0          3                           
+          bin in2_all_zeros                                  20          1 Covered                   
+          bin in2_all_ones                                   20          1 Covered                   
+          bin in2_others                                    100          1 Covered                   
+      Coverpoint cp_xor_out                              100.0%        100 Covered                   
+          covered/total bins:                                 3          3                           
+          missing/total bins:                                 0          3                           
+          bin out_all_zeros                                  40          1 Covered                   
+          bin out_all_ones                                    1          1 Covered                   
+          bin out_others                                     99          1 Covered                   
+  
+TOTAL COVERGROUP COVERAGE: 100.0%  COVERGROUP TYPES: 4
+

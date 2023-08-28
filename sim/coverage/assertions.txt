@@ -1,0 +1,86 @@
+
+ASSERTION RESULTS:
+-------------------------------------------------------
+Name                 File(Line)           Failure Pass 
+                                          Count   Count 
+-------------------------------------------------------
+/uvm_pkg/uvm_callbacks/uvm_callbacks__1/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__2/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__3/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__4/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__5/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__6/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__7/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__8/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__9/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__10/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__11/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__12/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__13/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__14/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__15/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__16/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__17/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__18/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_callbacks/uvm_callbacks__19/initialize/immed__503
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_callback.svh(503)       0     3
+/uvm_pkg/uvm_phase/add/immed__1302
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_phases.svh(1302)       0    69
+/uvm_pkg/uvm_phase/get_domain/immed__1481
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_phases.svh(1481)       0 26556
+/uvm_pkg/uvm_component/new/#ublk#34#1719/immed__1723
+                     D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_component.svh(1723)       0   351
+/all_one_seq_pkg/and_all_one_seq/body/immed__13
+                     E:/UVM/Bitwise/tb/seq_lib/all_ones_seq//and_all_one_seq.svh(13)       0    20
+/all_one_seq_pkg/or_all_one_seq/body/immed__13
+                     E:/UVM/Bitwise/tb/seq_lib/all_ones_seq//or_all_one_seq.svh(13)       0    20
+/all_one_seq_pkg/shift_all_one_seq/body/immed__13
+                     E:/UVM/Bitwise/tb/seq_lib/all_ones_seq//shift_all_one_seq.svh(13)       0    20
+/all_one_seq_pkg/xor_all_one_seq/body/immed__13
+                     E:/UVM/Bitwise/tb/seq_lib/all_ones_seq//xor_all_one_seq.svh(13)       0    20
+/all_zero_seq_pkg/and_all_zero_seq/body/immed__13
+                     E:/UVM/Bitwise/tb/seq_lib/all_zeros_seq//and_all_zero_seq.svh(13)       0    20
+/all_zero_seq_pkg/or_all_zero_seq/body/immed__13
+                     E:/UVM/Bitwise/tb/seq_lib/all_zeros_seq//or_all_zero_seq.svh(13)       0    20
+/all_zero_seq_pkg/shift_all_zero_seq/body/immed__13
+                     E:/UVM/Bitwise/tb/seq_lib/all_zeros_seq//shift_all_zero_seq.svh(13)       0    20
+/all_zero_seq_pkg/xor_all_zero_seq/body/immed__13
+                     E:/UVM/Bitwise/tb/seq_lib/all_zeros_seq//xor_all_zero_seq.svh(13)       0    20
+/random_seq_pkg/and_random_seq/body/immed__13
+                     E:/UVM/Bitwise/tb/seq_lib/random_seq//and_random_seq.svh(13)       0   100
+/random_seq_pkg/or_random_seq/body/immed__13
+                     E:/UVM/Bitwise/tb/seq_lib/random_seq//or_random_seq.svh(13)       0   100
+/random_seq_pkg/shift_random_seq/body/immed__13
+                     E:/UVM/Bitwise/tb/seq_lib/random_seq//shift_random_seq.svh(13)       0   100
+/random_seq_pkg/xor_random_seq/body/immed__13
+                     E:/UVM/Bitwise/tb/seq_lib/random_seq//xor_random_seq.svh(13)       0   100
+/bitwise_pkg/bitwise_scoreboard/and_compare/ass1
+                     E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(82)       0   140
+/bitwise_pkg/bitwise_scoreboard/or_compare/ass2
+                     E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(95)       0   140
+/bitwise_pkg/bitwise_scoreboard/shift_compare/ass3
+                     E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(113)       0   140
+/bitwise_pkg/bitwise_scoreboard/shift_compare/ass4
+                     E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(121)       0   140
+/bitwise_pkg/bitwise_scoreboard/xor_compare/ass5
+                     E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(136)       0   140
+
+

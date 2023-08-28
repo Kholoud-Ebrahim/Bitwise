@@ -1,0 +1,947 @@
+# vsim +UVM_TESTNAME=all_zero_test -assertdebug -coverage -fsmdebug -c -debugDB top_opt 
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.param_pkg
+# Loading work.seq_item_pkg
+# Loading work.cov_collect_pkg
+# Loading work.base_seq_pkg
+# Loading work.all_one_seq_pkg
+# Loading work.all_zero_seq_pkg
+# Loading work.random_seq_pkg
+# Loading work.xor_agent_pkg
+# Loading work.shift_agent_pkg
+# Loading work.or_agent_pkg
+# Loading work.and_agent_pkg
+# Loading work.bitwise_pkg
+# Loading work.bitwise_top_sv_unit
+# Loading work.bitwise_top(fast)
+# Loading work.and_intf(fast)
+# Loading work.or_intf(fast)
+# Loading work.xor_intf(fast)
+# Loading work.shift_intf(fast)
+# Loading work.bitwise(fast)
+# Loading D:\questasim_10.0b\uvm-1.0p1\win32\uvm_dpi.dll
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+# 1
+# ----------------------------------------------------------------
+# UVM-1.0p1 
+# (C) 2007-2011 Mentor Graphics Corporation
+# (C) 2007-2011 Cadence Design Systems, Inc.
+# (C) 2006-2011 Synopsys, Inc.
+# ----------------------------------------------------------------
+# UVM_INFO @ 0: reporter [RNTST] Running test all_zero_test...
+# UVM_INFO @ 0 ns: reporter [UVMTOP] UVM testbench topology:
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# uvm_test_top               all_zero_test             -     @480 
+#   env                      bitwise_env               -     @489 
+#     and_agnt               and_agent                 -     @510 
+#       and_drv              and_driver                -     @943 
+#         rsp_port           uvm_analysis_port         -     @958 
+#         sqr_pull_port      uvm_seq_item_pull_port    -     @950 
+#       and_mon              and_monitor               -     @966 
+#         and_mon_port       uvm_analysis_port         -     @973 
+#       and_mon2agnt_port    uvm_analysis_port         -     @517 
+#       and_sqr              and_sequencer             -     @834 
+#         rsp_export         uvm_analysis_export       -     @841 
+#         seq_item_export    uvm_seq_item_pull_imp     -     @935 
+#         arbitration_queue  array                     0     -    
+#         lock_queue         array                     0     -    
+#         num_last_reqs      integral                  32    'd1  
+#         num_last_rsps      integral                  32    'd1  
+#     and_cov                and_coverage_collector    -     @609 
+#       analysis_imp         uvm_analysis_imp          -     @616 
+#       cov_imp              uvm_analysis_imp          -     @624 
+#     or_agnt                or_agent                  -     @525 
+#       or_drv               or_driver                 -     @1104
+#         rsp_port           uvm_analysis_port         -     @1119
+#         sqr_pull_port      uvm_seq_item_pull_port    -     @1111
+#       or_mon               or_monitor                -     @1127
+#         or_mon_port        uvm_analysis_port         -     @1134
+#       or_mon2agnt_port     uvm_analysis_port         -     @532 
+#       or_sqr               or_sequencer              -     @995 
+#         rsp_export         uvm_analysis_export       -     @1002
+#         seq_item_export    uvm_seq_item_pull_imp     -     @1096
+#         arbitration_queue  array                     0     -    
+#         lock_queue         array                     0     -    
+#         num_last_reqs      integral                  32    'd1  
+#         num_last_rsps      integral                  32    'd1  
+#     or_cov                 or_coverage_collector     -     @632 
+#       analysis_imp         uvm_analysis_imp          -     @639 
+#       cov_imp              uvm_analysis_imp          -     @647 
+#     scb                    bitwise_scoreboard        -     @570 
+#       and_scb_imp          uvm_analysis_imp_and      -     @577 
+#       or_scb_imp           uvm_analysis_imp_or       -     @585 
+#       shift_scb_imp        uvm_analysis_imp_shift    -     @593 
+#       xor_scb_imp          uvm_analysis_imp_xor      -     @601 
+#     shift_agnt             shift_agent               -     @540 
+#       shift_drv            shift_driver              -     @1266
+#         rsp_port           uvm_analysis_port         -     @1281
+#         sqr_pull_port      uvm_seq_item_pull_port    -     @1273
+#       shift_mon            shift_monitor             -     @1289
+#         shift_mon_port     uvm_analysis_port         -     @1296
+#       shift_mon2agnt_port  uvm_analysis_port         -     @547 
+#       shift_sqr            shift_sequencer           -     @1157
+#         rsp_export         uvm_analysis_export       -     @1164
+#         seq_item_export    uvm_seq_item_pull_imp     -     @1258
+#         arbitration_queue  array                     0     -    
+#         lock_queue         array                     0     -    
+#         num_last_reqs      integral                  32    'd1  
+#         num_last_rsps      integral                  32    'd1  
+#     shift_cov              shift_coverage_collector  -     @678 
+#       analysis_imp         uvm_analysis_imp          -     @685 
+#       cov_imp              uvm_analysis_imp          -     @693 
+#     vsqr                   virtual_sequencer         -     @722 
+#       rsp_export           uvm_analysis_export       -     @729 
+#       seq_item_export      uvm_seq_item_pull_imp     -     @823 
+#       arbitration_queue    array                     0     -    
+#       lock_queue           array                     0     -    
+#       num_last_reqs        integral                  32    'd1  
+#       num_last_rsps        integral                  32    'd1  
+#     xor_agnt               xor_agent                 -     @555 
+#       xor_drv              xor_driver                -     @1433
+#         rsp_port           uvm_analysis_port         -     @1448
+#         sqr_pull_port      uvm_seq_item_pull_port    -     @1440
+#       xor_mon              xor_monitor               -     @1456
+#         xor_mon_port       uvm_analysis_port         -     @1463
+#       xor_mon2agnt_port    uvm_analysis_port         -     @562 
+#       xor_sqr              xor_sequencer             -     @1324
+#         rsp_export         uvm_analysis_export       -     @1331
+#         seq_item_export    uvm_seq_item_pull_imp     -     @1425
+#         arbitration_queue  array                     0     -    
+#         lock_queue         array                     0     -    
+#         num_last_reqs      integral                  32    'd1  
+#         num_last_rsps      integral                  32    'd1  
+#     xor_cov                xor_coverage_collector    -     @655 
+#       analysis_imp         uvm_analysis_imp          -     @662 
+#       cov_imp              uvm_analysis_imp          -     @670 
+# ----------------------------------------------------------------
+# 
+# all_zero_test_counter = 1
+# start raise_objection
+# stop raise_objection
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @1665
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @1669
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @1673
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @1677
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd2  
+#   shift_left_op            integral                  8     'd8  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 51 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @   51 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 51 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @   51 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 51 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @   51 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 51 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @   51 ns: in=0   op=10   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 51 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @   51 ns: in=0   op=1000   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @1681
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @1685
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @1689
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @1693
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd3  
+#   shift_left_op            integral                  8     'd3  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 71 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @   71 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 71 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @   71 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 71 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @   71 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 71 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @   71 ns: in=0   op=11   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 71 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @   71 ns: in=0   op=11   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @1750
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @1754
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @1758
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @1762
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd6  
+#   shift_left_op            integral                  8     'd3  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 91 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @   91 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 91 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @   91 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 91 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @   91 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 91 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @   91 ns: in=0   op=110   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 91 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @   91 ns: in=0   op=11   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @1814
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @1818
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @1822
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @1826
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd5  
+#   shift_left_op            integral                  8     'd8  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 111 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  111 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 111 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  111 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 111 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  111 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 111 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  111 ns: in=0   op=101   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 111 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  111 ns: in=0   op=1000   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @1878
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @1882
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @1886
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @1890
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd8  
+#   shift_left_op            integral                  8     'd1  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 131 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  131 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 131 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  131 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 131 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  131 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 131 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  131 ns: in=0   op=1000   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 131 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  131 ns: in=0   op=1   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @1942
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @1946
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @1950
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @1954
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd6  
+#   shift_left_op            integral                  8     'd8  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 151 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  151 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 151 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  151 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 151 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  151 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 151 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  151 ns: in=0   op=110   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 151 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  151 ns: in=0   op=1000   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @2006
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @2010
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @2014
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @2018
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd5  
+#   shift_left_op            integral                  8     'd6  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 171 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  171 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 171 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  171 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 171 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  171 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 171 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  171 ns: in=0   op=101   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 171 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  171 ns: in=0   op=110   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @2070
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @2074
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @2078
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @2082
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd6  
+#   shift_left_op            integral                  8     'd8  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 191 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  191 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 191 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  191 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 191 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  191 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 191 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  191 ns: in=0   op=110   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 191 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  191 ns: in=0   op=1000   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @2134
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @2138
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @2142
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @2146
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd2  
+#   shift_left_op            integral                  8     'd8  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 211 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  211 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 211 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  211 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 211 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  211 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 211 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  211 ns: in=0   op=10   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 211 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  211 ns: in=0   op=1000   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @2198
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @2202
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @2206
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @2210
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd3  
+#   shift_left_op            integral                  8     'd1  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 231 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  231 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 231 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  231 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 231 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  231 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 231 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  231 ns: in=0   op=11   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 231 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  231 ns: in=0   op=1   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @2262
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @2266
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @2270
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @2274
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd7  
+#   shift_left_op            integral                  8     'd6  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 251 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  251 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 251 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  251 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 251 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  251 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 251 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  251 ns: in=0   op=111   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 251 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  251 ns: in=0   op=110   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @2326
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @2330
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @2334
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @2338
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd6  
+#   shift_left_op            integral                  8     'd8  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 271 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  271 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 271 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  271 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 271 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  271 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 271 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  271 ns: in=0   op=110   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 271 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  271 ns: in=0   op=1000   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @2390
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @2394
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @2398
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @2402
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd2  
+#   shift_left_op            integral                  8     'd2  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 291 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  291 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 291 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  291 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 291 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  291 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 291 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  291 ns: in=0   op=10   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 291 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  291 ns: in=0   op=10   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @2454
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @2458
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @2462
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @2466
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd5  
+#   shift_left_op            integral                  8     'd8  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 311 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  311 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 311 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  311 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 311 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  311 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 311 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  311 ns: in=0   op=101   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 311 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  311 ns: in=0   op=1000   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @2518
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @2522
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @2526
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @2530
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd8  
+#   shift_left_op            integral                  8     'd4  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 331 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  331 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 331 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  331 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 331 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  331 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 331 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  331 ns: in=0   op=1000   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 331 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  331 ns: in=0   op=100   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @2582
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @2586
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @2590
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @2594
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd6  
+#   shift_left_op            integral                  8     'd3  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 351 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  351 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 351 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  351 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 351 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  351 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 351 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  351 ns: in=0   op=110   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 351 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  351 ns: in=0   op=11   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @2646
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @2650
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @2654
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @2658
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd1  
+#   shift_left_op            integral                  8     'd1  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 371 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  371 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 371 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  371 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 371 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  371 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 371 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  371 ns: in=0   op=1   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 371 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  371 ns: in=0   op=1   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @2710
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @2714
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @2718
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @2722
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd6  
+#   shift_left_op            integral                  8     'd6  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 391 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  391 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 391 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  391 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 391 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  391 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 391 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  391 ns: in=0   op=110   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 391 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  391 ns: in=0   op=110   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @2774
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @2778
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @2782
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @2786
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd3  
+#   shift_left_op            integral                  8     'd1  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 411 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  411 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 411 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  411 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 411 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  411 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 411 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  411 ns: in=0   op=11   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 411 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  411 ns: in=0   op=1   Actual=0   Exp=0
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# and_item                   and_seq_item              -     @2838
+#   and_in1                  integral                  8     'b0  
+#   and_in2                  integral                  8     'b0  
+#   and_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# or_item                    or_seq_item               -     @2842
+#   or_in1                   integral                  8     'b0  
+#   or_in2                   integral                  8     'b0  
+#   or_out                   integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# xor_item                   xor_seq_item              -     @2846
+#   xor_in1                  integral                  8     'b0  
+#   xor_in2                  integral                  8     'b0  
+#   xor_out                  integral                  8     'b0  
+# ----------------------------------------------------------------
+# ----------------------------------------------------------------
+# Name                       Type                      Size  Value
+# ----------------------------------------------------------------
+# shift_item                 shift_seq_item            -     @2850
+#   shift_right_in           integral                  8     'b0  
+#   shift_left_in            integral                  8     'b0  
+#   shift_right_op           integral                  8     'd6  
+#   shift_left_op            integral                  8     'd4  
+#   shift_right_out          integral                  8     'b0  
+#   shift_left_out           integral                  8     'b0  
+# ----------------------------------------------------------------
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(84) @ 431 ns: uvm_test_top.env.scb [COMPARE_AND_PASSED] @  431 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(97) @ 431 ns: uvm_test_top.env.scb [COMPARE_OR_PASSED] @  431 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(138) @ 431 ns: uvm_test_top.env.scb [COMPARE_XOR_PASSED] @  431 ns: in1=0   in2=0   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(115) @ 431 ns: uvm_test_top.env.scb [COMPARE_SHIFT_RIGHT_PASSED] @  431 ns: in=0   op=110   Actual=0   Exp=0
+# UVM_INFO E:/UVM/Bitwise/tb//bitwise_scoreboard.svh(123) @ 431 ns: uvm_test_top.env.scb [COMPARE_SHIFT_LEFT_PASSED] @  431 ns: in=0   op=100   Actual=0   Exp=0
+# start drop_objection
+# stop drop_objection
+# UVM_INFO verilog_src/uvm-1.0p1/src/base/uvm_objection.svh(1116) @ 442 ns: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  103
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [COMPARE_AND_PASSED]    20
+# [COMPARE_OR_PASSED]    20
+# [COMPARE_SHIFT_LEFT_PASSED]    20
+# [COMPARE_SHIFT_RIGHT_PASSED]    20
+# [COMPARE_XOR_PASSED]    20
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# ** Note: $finish    : D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_root.svh(392)
+#    Time: 442 ns  Iteration: 44  Instance: /bitwise_top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at D:/questasim_10.0b/win32/../verilog_src/uvm-1.0p1/src/base/uvm_root.svh line 392
